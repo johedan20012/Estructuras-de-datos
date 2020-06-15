@@ -13,7 +13,7 @@ struct NodoListaEnlazada{
 
 struct ListaEnlazada{
     NodoListaEnlazada* cabeza;
-    int tam;
+    unsigned int tam;
 
     void (*insertar)(ListaEnlazada*,int,unsigned int);
     void (*eliminarIndice)(ListaEnlazada*,unsigned int);
@@ -21,7 +21,7 @@ struct ListaEnlazada{
     int (*buscarElemento)(ListaEnlazada*,int);
     void (*buscarIndice)(ListaEnlazada*,unsigned int,int** regreso);
     void (*invertir)(ListaEnlazada*);
-    void (*fusionar)(ListaEnlazada*,ListaEnlazada*);
+    //void (*fusionar)(ListaEnlazada*,ListaEnlazada*); //Preguntar como se realiza el merge
 
     void (*imprimir)(ListaEnlazada*);
 };

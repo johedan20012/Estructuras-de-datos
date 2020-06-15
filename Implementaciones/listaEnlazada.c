@@ -127,6 +127,24 @@ static void buscarIndice(ListaEnlazada* lista,unsigned int indice,int** regreso)
     return;
 }
 
+static void invertir(ListaEnlazada* lista){
+    if(lista->tam == 0){
+        if(DEBUG) printf("Lista vacia, operacion invertir rechazada\n");
+        return;
+    }
+
+    NodoListaEnlazada* Nodo1 = lista->cabeza,*Nodo2 = lista->cabeza->nodoSig,*Nodo3 = NULL;
+    lista->cabeza->nodoSig = NULL;
+    while(Nodo2 != NULL){
+        Nodo3 = Nodo2->nodoSig;
+        Nodo2->nodoSig = Nodo1;
+        Nodo1 = Nodo2;
+        Nodo2 = Nodo3;
+    }
+
+    lista->cabeza = Nodo1;
+}
+
 static void imprimir(ListaEnlazada* lista){
     NodoListaEnlazada* nodoAct = lista->cabeza;
     while(nodoAct!=NULL){
@@ -146,6 +164,7 @@ ListaEnlazada* ListaEnlazadaNueva(){
     nueva->eliminarElemento = eliminarElemento;
     nueva->buscarElemento = buscarElemento;
     nueva->buscarIndice = buscarIndice;
+    nueva->invertir = invertir;
 
     nueva->imprimir = imprimir;
 }

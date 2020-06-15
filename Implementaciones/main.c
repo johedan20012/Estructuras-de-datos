@@ -48,27 +48,32 @@ int main(){
     }
 
     miLista->imprimir(miLista);
+
+    miLista->invertir(miLista);
+
+    printf("Lista invertida:\n");
+
+    miLista->imprimir(miLista);
    
-   printf("Se buscaran 5 elementos y 5 indices\n");
-   for(int a=0; a<5; a++){
-       int numero = rand() % 20;
-       int pos = miLista->buscarElemento(miLista,numero);
-       if(pos == -1){
-           printf("El numero %d no esta en la lista\n",numero);
-       }else{
-           printf("El numero %d esta en la lista en la posicion %d\n",numero,pos);
-       }
-   }
+    printf("Se buscaran 5 elementos y 5 indices\n");
+    for(int a=0; a<5; a++){
+        int numero = rand() % 20;
+        int pos = miLista->buscarElemento(miLista,numero);
+        if(pos == -1){
+            printf("El numero %d no esta en la lista\n",numero);
+        }else{
+            printf("El numero %d esta en la lista en la posicion %d\n",numero,pos);
+        }
+    }
 
-   for(int a=0; a<5; a++){
-       unsigned int pos = rand()%20;
-       int*numero;
-       miLista->buscarIndice(miLista,pos,&numero);
-       if(numero == NULL){
-           printf("El indice %d no esta en la lista\n",pos);
-       }else{
-           printf("El indice %d de la lista contiene al numero %d\n",pos,*numero);
-       }
-   }
-
+    for(int a=0; a<5; a++){
+        unsigned int pos = rand()%20;
+        int*numero;
+        miLista->buscarIndice(miLista,pos,&numero);
+        if(numero == NULL){
+            printf("El indice %d no esta en la lista\n",pos);
+        }else{
+            printf("El indice %d de la lista contiene al numero %d\n",pos,*numero);
+        }
+    }
 }
