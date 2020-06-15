@@ -1,2 +1,3 @@
-# Estructuras-de-datos
-Ejemplos y ejercicios de la clase de estructuras de datos en C.
+# Estructura de datos
+Ejercicios de la materia de estructuras de datos.
+Contiene implementaciones de las estruturas de datos basicas en C y ejemplos varios en C.
