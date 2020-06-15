@@ -1,0 +1,4 @@
+﻿  Proyecto.c
+c:\users\kevin20012\desktop\programacion\c\escuela\estructuras de datos\proyecto\proyecto\proyecto.c(127): warning C4305: '+=': truncamiento de 'double' a 'float'
+c:\users\kevin20012\desktop\programacion\c\escuela\estructuras de datos\proyecto\proyecto\proyecto.c(159): warning C4550: la expresión se evalúa como una función a la que le falta una lista de argumentos
+  Proyecto.vcxproj -> C:\Users\kevin20012\Desktop\Programacion\C\Escuela\estructuras de datos\Proyecto\Debug\Proyecto.exe
